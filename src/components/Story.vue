@@ -18,7 +18,7 @@
     <div class="flex-item-b">
       <h3 class="title">Popular on Medium</h3>
       <div class="flex-item-b-a" v-for="(value, index) in story" v-bind:key="index">
-        <p>{{ index + 1 }}</p>
+        <p class="color-lightgrey">{{ index + 1 }}</p>
         <div class="">
           <h3>{{ value.title }}</h3>
           <div>
