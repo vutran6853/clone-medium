@@ -3,27 +3,30 @@
     <Navbar v-bind:navbarItem="mediumData.navbarItem"/>
     <Headline v-bind:story="mediumData.story"/>
     <Banner v-bind:banner="mediumData.banner"/>
+    <Story v-bind:story="mediumData.story"/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator'
 import Navbar from './components/Navbar.vue'
 import Headline from './components/Headline.vue'
 import Banner from './components/Banner.vue'
+import Story from './components/Story.vue'
 
 @Component({
   name: 'App',
   components: {
     Navbar,
     Headline,
-    Banner
+    Banner,
+    Story
   }
 })
 
 class App extends Vue {
   public mediumData: object = {
-    navbarItem: ['Home', 'ONEZERO', 'ELEMENTAL', 'GEN', 'STARTUPS', 'SELF', 'TECH', 'HEATED', 'ZORA', 'DESIGN', 'CULTURE', 'HUMAN PARTS', 'MORE'],
+    navbarItem: ['HOME', 'ONEZERO', 'ELEMENTAL', 'GEN', 'STARTUPS', 'SELF', 'TECH', 'HEATED', 'ZORA', 'DESIGN', 'CULTURE', 'HUMAN PARTS', 'MORE'],
     story: [
       {
         title: 'The Masochistic Gaming Ecstasy of Super Mario ‘Kaizo’ Hacks',
@@ -71,7 +74,8 @@ class App extends Vue {
         title: 'Some Lessons Should not Be Handed Down',
         imageUrl: 'https://cdn-images-1.medium.com/max/1600/1*fa8GQ21bEZr3O2D5WamsNw.jpeg',
         subtitle: 'Despite what my auntie taught me, being a mom does not require martyrdom',
-        desc: 'Every night for the past several weeks, a cheerful, plump plumber arrives at my apartment and brutalizes me. Sometimes, his overalls are blue, other times red, but his cruel smile is constant. His mustache never changes. Something has gone bad with this version of Nintendo’s enduring, pipe-diving mascot Mario. He’s been modified, his game hacked into a nightmarishly difficult torture chamber that I have foolishly dedicated myself to successfully navigating.'
+        desc: 'Every night for the past several weeks, a cheerful, plump plumber arrives at my apartment and brutalizes me. Sometimes, his overalls are blue, other times red, but his cruel smile is constant. His mustache never changes. Something has gone bad with this version of Nintendo’s enduring, pipe-diving mascot Mario. He’s been modified, his game hacked into a nightmarishly difficult torture chamber that I have foolishly dedicated myself to successfully navigating.',
+        date: 'Jun 28 4 min read'
       }
     ],
     banner: {
@@ -79,11 +83,6 @@ class App extends Vue {
       message: 'Sign for Medium Daily Digest and get the best of Medium, tailored for you.'
     }
   }
-
-  private created = () => {
-    console.log(this)
-  }
-
 }
 
 export default App

@@ -33,17 +33,19 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  width: 75%;
   margin: auto;
+  height: 100px;
+  background-color: white;
 }
 
 .top-navbarItem {
-  /* background-color: blue; */
-  color: black;
   display: flex;
-  height: 4rem;
+  height: 50px;
+  width: 75%;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
+  color: black;
 }
 
 .top-navbarItem > span {
@@ -74,9 +76,11 @@ export default {
 }
 
 .botton-navbarItem {
-  /* background-color: yellow; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  height: 50px;
 }
-
 </style>
